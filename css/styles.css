@@ -55,6 +55,13 @@ a:hover {
     max-width: 80px;
 }
 
+.header-page h1{
+    transition: var(--transition);
+}
+.header-page h1:hover{
+    transition: var(--transition);
+    color: var(--color-unimatefinn);
+}
 
 .menu{
     width: 80%;
@@ -165,6 +172,10 @@ a:hover {
     display: flex;
 }
 
+.icones p{
+    line-height: 1.6;
+}
+
 
 
 @media(max-width:1100px){
@@ -180,14 +191,51 @@ a:hover {
         justify-content: center;
     }
     
-    
-    
-
-
-
-    
 }
 
+@media (max-width:650px){
+    .home{
+        height: 170vh;
+    }
+    .header-page{
+        gap: 5px;
+        font-size: 0.5rem;
+        width: 100%;
+    }
+    .header-page a{ 
+        font-size: 0.8rem;
+    }
+     p{
+        font-size: 0.75rem;
+        line-height: 1.7;
+    }
+
+}
+
+@media(max-width:495px){
+    .header-page a{ 
+        font-size: 0.6rem;
+    }
+     p{
+        font-size: 0.6rem;
+    }
+}
+@media(max-width:350px){
+    .header-page{
+        font-size: 0.4rem;
+    }
+    .header-page a{
+        font-size: 0.5rem;
+    }
+    .home{
+        
+        font-size: 0.6rem;
+        margin: auto;
+        padding-top: 20px;
+        gap: 10px;
+    }
+    
+}
 /* ver qual tela deixar as linhas */
 /* código para as linhas sumirem */
 /* vão sumir para celular e qualquer outra tela que n fique bom */

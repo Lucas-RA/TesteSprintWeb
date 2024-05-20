@@ -1,0 +1,249 @@
+/* colocar imagem de fundo para primeira parte */
+/* algum wallpaper/banner/textura para a segunda seção */
+
+:root{
+    --color-dark: #000000;
+    --color-unimatefinn: #2F5F9E;
+    --transition: .5s;
+    /* aplicar cores */
+   /* criar outras váriaveis */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+img{
+    max-width: 100%;
+}
+
+a:hover {
+    color: var(--color-unimatefinn);
+
+}
+
+
+.geral{
+    width: 100%;
+    /* padding: 20px 30px; */
+}
+
+.header-page{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-page img{
+    max-width: 80px;
+}
+
+
+.menu{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 15px 0 0;
+}
+
+.menu ol{
+    display: flex;
+    gap: 15px;
+}
+
+.home{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #B8BFC6;
+    /* alterar tamanho fonte e espaçamento de linhas */
+    /* ajustar imagem (colocar para ficar embaixo do texto */
+    /* (imagem-principal) */
+}
+
+.conteudo{
+    /* escolher tamanho da tela para deixar responsivo */
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    
+}
+
+.conteudo p {
+    /* antes estava - margin-left: 55px; - ver se volto para isso ou altero */
+    text-align: baseline;
+    justify-content: center;
+    padding-left: 40px;
+    margin-right: 15px;
+}
+
+.imagem-principal{
+    width: 50%;  /*alterar para 100% em telas menores */
+    display: flex;
+    /* ver de ajuste para imagem (ficar proporcional conforme a tela) */
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.imagem-principal img{
+    
+    height: 90%;
+    object-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    
+    object-fit: cover;
+ 
+    
+   object-position: center;
+    border-radius: 1%;
+}
+
+.sobre{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding: 45px 30px;
+    position: relative;
+    
+    
+}
+
+
+
+/* Linhas entre ícones */
+.caixa::before,
+.caixa::after{
+    content: url(../images/linha.svg);
+    position: absolute;
+    height: 20px;
+    top: 18%;
+    transform: translateY(-50%);
+    transform: translateX(17%);
+}
+
+
+
+.caixa:first-child::before,
+.caixa:last-child::after{
+    display: none;
+}
+/* fim linhas */
+
+.sobre h2{
+    padding-bottom: 25px;
+}
+
+.espacoIcones{
+    padding-top: 15px;
+    display: flex;
+}
+
+
+
+@media(max-width:1100px){
+    .header-page{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+@media (max-width:650px){
+    .header-page a{ 
+        font-size: 0.8rem;
+    }
+    .conteudo p{
+        font-size: 0.75rem;
+    }
+}
+
+@media(max-width:395px){
+    .header-page a{ 
+        font-size: 0.6rem;
+    }
+    .conteudo p{
+        font-size: 0.6rem;
+    }
+}
+/* ver qual tela deixar as linhas */
+/* código para as linhas sumirem */
+/* vão sumir para celular e qualquer outra tela que n fique bom */
+@media(max-width:1400px){
+    .caixa::before,
+    .caixa::after{
+    content: url("");
+    }
+}
+
+@media(max-width:860px){
+    /* Ajustar imagem para ficar melhor */
+
+     
+    .espacoIcones{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .home{
+        height: 100vh;
+      /* a imagem está ruim com a tela de 851 - essa div aumenta o tamanho - como fazer para ficar certo -> quanto mais a tela diminui, vai ficando certo */
+    }
+    .conteudo{
+        width: 80%;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 20px;
+        
+    }
+    .imagem-principal{
+        width: 80%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 60px;
+    }
+    .imagem img{
+        width: 100%;
+        height: 20%;
+    }
+    /* ver espaçamento entre os conteúdos de cada ícone */
+}

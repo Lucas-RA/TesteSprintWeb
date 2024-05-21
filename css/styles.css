@@ -13,11 +13,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
 
 html{
     scroll-behavior: smooth;
+    
 }
 
 ul, ol{
@@ -31,11 +32,13 @@ a{
 }
 
 img{
-    max-width: 100%;
+    max-width: 90%;
+    border-radius: 10%;
 }
 
 a:hover {
     color: var(--color-unimatefinn);
+    font-weight: bold;
 
 }
 
@@ -84,7 +87,7 @@ a:hover {
     min-height: 60vh;
     display: flex;
     flex-wrap: wrap;
-    background-color: #B8BFC6;
+    background-color: #6692CC;
     /* alterar tamanho fonte e espaçamento de linhas */
     /* ajustar imagem (colocar para ficar embaixo do texto */
     /* (imagem-principal) */
@@ -95,13 +98,17 @@ a:hover {
     width: 50%;
     height: auto;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
     gap: 25px;
     
 }
 
-.conteudo p {
+
+.conteudo p, h1 {
     /* antes estava - margin-left: 55px; - ver se volto para isso ou altero */
+    /* colocar justify */
     text-align: baseline;
     justify-content: center;
     padding-left: 40px;
@@ -110,6 +117,7 @@ a:hover {
 
 .imagem-principal{
     width: 50%;  /*alterar para 100% em telas menores */
+   
     display: flex;
     /* ver de ajuste para imagem (ficar proporcional conforme a tela) */
     justify-content: center;
@@ -119,7 +127,7 @@ a:hover {
 
 .imagem-principal img{
     
-    height: 90%;
+    min-height: 80%;
     object-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -138,20 +146,37 @@ a:hover {
     text-align: center;
     padding: 45px 30px;
     position: relative;
+    background-color: #6B7F99;
     
     
+}
+
+.sobre p{
+    padding-bottom: 10px;
 }
 
 
 
 /* Linhas entre ícones */
-.caixa::before,
-.caixa::after{
+.caixa:nth-child(2):before
+{
     content: url(../images/linha.svg);
-    position: absolute;
+   position: absolute;
     height: 20px;
-    top: 18%;
+    top: 20%;
+    left: 20%;
     transform: translateY(-50%);
+    transform: translateX(17%);
+}
+
+
+.caixa:nth-child(2):after{
+    content: url(../images/linha.svg);
+   position: absolute;
+    height: 20px;
+    top: 20%;
+    left: 50%;
+    transform: translateY(50%);
     transform: translateX(17%);
 }
 
@@ -168,16 +193,38 @@ a:hover {
 }
 
 .espacoIcones{
-    padding-top: 15px;
+    width: 100%;
+    padding-top:10px;
     display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
+
+.caixa{
+    width: 30%;
+    
+}
+
+.icones{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
 
 .icones p{
     line-height: 1.6;
+    font-size: 0.7rem;
 }
 
 
-
+/* arrumar menu */
 @media(max-width:1100px){
     .header-page{
         display: flex;
@@ -193,7 +240,7 @@ a:hover {
     
 }
 
-@media (max-width:650px){
+/* @media (max-width:650px){
     .home{
         height: 170vh;
     }
@@ -210,9 +257,9 @@ a:hover {
         line-height: 1.7;
     }
 
-}
+} */
 
-@media(max-width:495px){
+/* @media(max-width:495px){
     .header-page a{ 
         font-size: 0.6rem;
     }
@@ -235,52 +282,71 @@ a:hover {
         gap: 10px;
     }
     
-}
+} */
 /* ver qual tela deixar as linhas */
 /* código para as linhas sumirem */
 /* vão sumir para celular e qualquer outra tela que n fique bom */
-@media(max-width:1400px){
-    .caixa::before,
+@media(max-width:1280px){
+    .caixa:nth-child(2):before,
     .caixa::after{
-    content: url("");
+    display: none;
     }
 }
 
 @media(max-width:860px){
-    /* Ajustar imagem para ficar melhor */
-
-     
-    .espacoIcones{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .home{
-        height: 100vh;
-      /* a imagem está ruim com a tela de 851 - essa div aumenta o tamanho - como fazer para ficar certo -> quanto mais a tela diminui, vai ficando certo */
-    }
+    
+    /* aumentar imagem */
     .conteudo{
         width: 80%;
-        height: 40vh;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         margin: auto;
-        margin-top: 20px;
+       margin-top: 10px;
         
     }
     .imagem-principal{
+        
         width: 80%;
-        height: 50vh;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: auto;
         margin-bottom: 60px;
     }
-    .imagem img{
-        width: 100%;
-        height: 20%;
+}
+
+@media(max-width:510px){
+    .header-page a{ 
+        font-size: 0.6rem;
+        font-weight: bold;
     }
-    /* ver espaçamento entre os conteúdos de cada ícone */
+     p{
+        font-size: 0.6rem;
+    }
+    .home{
+        font-size: 0.6rem;
+        margin: auto;
+        
+        gap: 10px;
+    }
+    .conteudo{
+       /* diminuir o tamanho -> juntar a imagem com o texto ->mas a imagem menor */
+       height: 20%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+    .imagem-principal{
+        /* fazer a imagem subir para o topo dessa div */
+        height: 80%;
+        padding-right: 0px;
+        background-image: cover;
+        margin: auto;
+        margin-top: 0px;
+    }
 }

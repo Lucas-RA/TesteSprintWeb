@@ -5,8 +5,7 @@
     --color-dark: #000000;
     --color-unimatefinn: #2F5F9E;
     --transition: .5s;
-    /* aplicar cores */
-   /* criar outras váriaveis */
+    
 }
 
 * {
@@ -45,7 +44,7 @@ a:hover {
 
 .geral{
     width: 100%;
-    /* padding: 20px 30px; */
+    
 }
 
 .header-page{
@@ -88,13 +87,11 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     background-color: #6692CC;
-    /* alterar tamanho fonte e espaçamento de linhas */
-    /* ajustar imagem (colocar para ficar embaixo do texto */
-    /* (imagem-principal) */
+   
 }
 
 .conteudo{
-    /* escolher tamanho da tela para deixar responsivo */
+   
     width: 50%;
     height: auto;
     display: flex;
@@ -107,8 +104,7 @@ a:hover {
 
 
 .conteudo p, h1 {
-    /* antes estava - margin-left: 55px; - ver se volto para isso ou altero */
-    /* colocar justify */
+   
     text-align: baseline;
     justify-content: center;
     padding-left: 40px;
@@ -116,10 +112,10 @@ a:hover {
 }
 
 .imagem-principal{
-    width: 50%;  /*alterar para 100% em telas menores */
+    width: 50%;  
    
     display: flex;
-    /* ver de ajuste para imagem (ficar proporcional conforme a tela) */
+    
     justify-content: center;
     align-items: center;
     padding-right: 15px;
@@ -216,15 +212,13 @@ a:hover {
 }
 
 
-
-
 .icones p{
     line-height: 1.6;
     font-size: 0.7rem;
 }
 
 
-/* arrumar menu */
+
 @media(max-width:1100px){
     .header-page{
         display: flex;
@@ -240,51 +234,6 @@ a:hover {
     
 }
 
-/* @media (max-width:650px){
-    .home{
-        height: 170vh;
-    }
-    .header-page{
-        gap: 5px;
-        font-size: 0.5rem;
-        width: 100%;
-    }
-    .header-page a{ 
-        font-size: 0.8rem;
-    }
-     p{
-        font-size: 0.75rem;
-        line-height: 1.7;
-    }
-
-} */
-
-/* @media(max-width:495px){
-    .header-page a{ 
-        font-size: 0.6rem;
-    }
-     p{
-        font-size: 0.6rem;
-    }
-}
-@media(max-width:350px){
-    .header-page{
-        font-size: 0.4rem;
-    }
-    .header-page a{
-        font-size: 0.5rem;
-    }
-    .home{
-        
-        font-size: 0.6rem;
-        margin: auto;
-        padding-top: 20px;
-        gap: 10px;
-    }
-    
-} */
-/* ver qual tela deixar as linhas */
-/* código para as linhas sumirem */
 /* vão sumir para celular e qualquer outra tela que n fique bom */
 @media(max-width:1280px){
     .caixa:nth-child(2):before,
@@ -323,7 +272,7 @@ a:hover {
         font-weight: bold;
     }
      p{
-        font-size: 0.6rem;
+        font-size: 0.9rem;
     }
     .home{
         font-size: 0.6rem;
@@ -333,7 +282,7 @@ a:hover {
     }
     .conteudo{
        /* diminuir o tamanho -> juntar a imagem com o texto ->mas a imagem menor */
-       height: 20%;
+       
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -343,10 +292,13 @@ a:hover {
     }
     .imagem-principal{
         /* fazer a imagem subir para o topo dessa div */
-        height: 80%;
+        
         padding-right: 0px;
         background-image: cover;
         margin: auto;
         margin-top: 0px;
+    }
+    .imagem-principal img{
+        width: 100%;
     }
 }
